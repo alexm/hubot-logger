@@ -10,6 +10,10 @@
 
 module.exports = (robot) ->
 
+  robot.hear /./, (msg) ->
+    robot.logger.info "MYLOG: #{msg.message.text}"
+    robot.logger.info "MYLOG: #{JSON.stringify(msg.message)}"
+
   # robot.hear /badger/i, (msg) ->
   #   msg.send "Badgers? BADGERS? WE DON'T NEED NO STINKIN BADGERS"
   #
