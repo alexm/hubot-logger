@@ -12,3 +12,5 @@ npm install -g coffee-script yo generator-hubot
 
 # ircd
 apt-get install -y ircd-hybrid
+perl -i -pe 's,^(\s*flags\s*=\s*need_ident),#$1,' /etc/ircd-hybrid/ircd.conf
+service ircd-hybrid restart
